@@ -54,6 +54,7 @@ Route::get('/ekjp/kursus/{id}', [KursusController::class, 'kursus']);
 Route::get('/ekjp/mohon/{id}', [KursusController::class, 'mohon']);
 Route::post('/ekjp/mohon/{id}', [KursusController::class, 'mohon']);
 Route::post('/ekjp/mohonform', [KursusController::class, 'mohonForm']);
+
 Route::get('/publicaduanuppa', [PublicAduanUppaController::class, 'create'])->name('publicaduanuppa');
 Route::post('/publicaduanuppa', [PublicAduanUppaController::class, 'store'])->name('publicaduanuppa.store');
 
@@ -75,9 +76,8 @@ Route::resources([
     'aduanicts' => AduanictController::class,
     'jenisaseticts' => JenisAsetIctController::class,
     'kategoriaduanicts' => KategoriAduanIctController::class,
-    'aduanicts' => AduanictController::class,
-    'jawatans' => JawatanController::class,
     'lokasiutamaicts' => LokasiUtamaIctController::class,
+
     'aduanuppas' => AduanUppaController::class,
     'jenisasetuppas' => JenisAsetUppaController::class,
     'kategoriaduanuppas' => KategoriAduanUppaController::class,
